@@ -2,7 +2,7 @@ const express=require("express")
 require("dotenv").config()
 const {connection}=require("./config/db")
 const {userrouter}=require("./routees/userrouter")
-const {weatherrouter}=require("./routees/weather")
+// const {weatherrouter}=require("./routees/weather")
 const {authentication}=require("./middlewares/authentication")
 
 const winston=require("winston")
@@ -43,7 +43,7 @@ app.get("/",async(req,res)=>
 
 app.use("/users",userrouter)
 app.use(authentication)
-app.use("/weather",weatherrouter)
+// app.use("/weather",weatherrouter)
 
 
 
